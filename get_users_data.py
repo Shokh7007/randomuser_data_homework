@@ -12,3 +12,14 @@ def get_users_data(data:dict) -> list:
     Returns:
         list: users data list
     """
+    z=[]
+    x=data['results']
+    a=[]
+    for i in range(len(x)):
+        z.append(x[i]["name"]["first"])
+        z.append(x[i]["name"]["last"])
+        z.append(x[i]["phone"])
+        res={"first_name":z[0],"last_name":z[1],"phone_number":z[2]}
+        a.append(res)
+    return a
+print(get_users_data(get_data.data))
