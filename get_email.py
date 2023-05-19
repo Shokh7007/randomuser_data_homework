@@ -9,3 +9,9 @@ def get_email(data:dict) -> list:
     Returns:
         list: users email
     """
+    z=[]
+    x=data['results']
+    for i in x:
+        z.append(i['email'])
+    return z
+print(get_email(get_data.data))
